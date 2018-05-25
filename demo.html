@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./md5.js"></script>
+    <script src="./base64.js"></script>
+    <script src="./sha1.js"></script>
+    <script src="./des.js"></script>
+</head>
+
+<body>
+    <script>
+        // md5加密
+        console.log("***********md5加密************");
+        console.log(hex_md5("123456"));
+        // base64加密
+        console.log("******base64加密***********");
+        console.log("123456");
+        console.log(new Base64().encode("123456"));
+        // base64解密
+        console.log("*********base64解密*******");
+        console.log(new Base64().decode(new Base64().encode("123456")));
+        // sha1加密
+        console.log("********sha1加密********");
+        console.log(hex_sha1('123456'));
+        // des加密
+        console.log("*******des加密**********");
+        console.log("helloworld");
+        console.log(encryptByDES("helloworld"));
+        // des加密
+        console.log("************des加密*******");
+        console.log("helloworld");
+        console.log(encryptByDES("helloworld"));
+        // des解密
+        console.log("***********des解密*******");
+        console.log(decryptByDESModeEBC(encryptByDES("helloworld")));
+    </script>
+    <script src="./aes.js"></script>
+    <script>
+        // aes加密
+        console.log("*********aes加密*******");
+        console.log("helloworld");
+        console.log(encryptByAES("helloworld"));
+        // aes解密
+        console.log("********aes解密********");
+        console.log(decryptByDES(encryptByAES("helloworld")));
+    </script>
+</body>
+
+</html>
